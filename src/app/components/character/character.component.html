@@ -8,12 +8,16 @@
       <th>
         Name
       </th>
+      <th>
+        Image
+      </th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let character of characters">
       <td>{{character.fullName}}</td>
+      <td><img alt="character" src="assets/images/{{character.imagePath}}"></td>
       <td>
         <a [routerLink]="['/character/', character.characterId]">View</a>
       </td>

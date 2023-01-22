@@ -8,12 +8,18 @@
       <th>
         Name
       </th>
+      <th>
+        Image
+      </th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let world of homeWorlds">
       <td>{{world.name}}</td>
+
+      <td> <img alt="item" src="assets/images/{{world.imagePath}}">  </td>
+
       <td>
         <a>View</a>
       </td>
