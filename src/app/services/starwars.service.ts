@@ -6,7 +6,7 @@ import { Character } from '../models/character.model';
 @Injectable({
   providedIn: 'root'
 })
-export class CharactersService {
+export class StarWarsService {
 
   baseUrl = 'https://localhost:7073'
 
