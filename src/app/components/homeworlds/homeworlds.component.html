@@ -12,7 +12,12 @@
     </tr>
   </thead>
   <tbody>
-
+    <tr *ngFor="let world of homeWorlds">
+      <td>{{world.name}}</td>
+      <td>
+        <a>View</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
