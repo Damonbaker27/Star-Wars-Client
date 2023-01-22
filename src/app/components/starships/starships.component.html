@@ -1,0 +1,22 @@
+<div class="container">
+  <br>
+  <h1 class="title">StarShips</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ship of starships">
+        <td>{{ship.name}}</td>
+        <td>
+          <a>View</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

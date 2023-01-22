@@ -10,6 +10,8 @@ import { ViewHomeworldComponent } from './components/view-homeworld/view-homewor
 import { HomeworldsComponent } from './components/homeworlds/homeworlds.component';
 import { FilmsComponent } from './components/films/films.component';
 import { ViewFilmComponent } from './components/view-film/view-film.component';
+import { StarshipsComponent } from './components/starships/starships.component';
+import { ViewStarshipComponent } from './components/view-starship/view-starship.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ViewFilmComponent } from './components/view-film/view-film.component';
     ViewHomeworldComponent,
     HomeworldsComponent,
     FilmsComponent,
-    ViewFilmComponent
+    ViewFilmComponent,
+    StarshipsComponent,
+    ViewStarshipComponent
   ],
   imports: [
     BrowserModule,

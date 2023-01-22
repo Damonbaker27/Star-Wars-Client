@@ -1,6 +1,6 @@
 export interface Character{
   characterId: string;
-  fullname: string;
+  fullName: string;
   homeWorldId: string;
   mass: string;
   hairColor: string;

@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CharacterComponent } from './components/character/character.component';
 import { FilmsComponent } from './components/films/films.component';
 import { HomeworldsComponent } from './components/homeworlds/homeworlds.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 import { ViewCharacterComponent } from './components/view-character/view-character.component';
 import { ViewFilmComponent } from './components/view-film/view-film.component';
 import { ViewHomeworldComponent } from './components/view-homeworld/view-homeworld.component';
+import { ViewStarshipComponent } from './components/view-starship/view-starship.component';
 
 const routes: Routes = [
 {
@@ -32,6 +34,14 @@ const routes: Routes = [
   path:'films/:id',
   component: ViewFilmComponent
 
+},
+{
+  path: 'starships',
+  component: StarshipsComponent
+},
+{
+  path: 'starships/:id',
+  component: ViewStarshipComponent
 }
 
 

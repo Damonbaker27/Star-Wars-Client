@@ -12,7 +12,12 @@
     </tr>
   </thead>
   <tbody>
-
+    <tr *ngFor="let character of characters">
+      <td>{{character.fullName}}</td>
+      <td>
+        <a [routerLink]="['/character/', character.characterId]">View</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
