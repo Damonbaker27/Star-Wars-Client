@@ -16,19 +16,29 @@ export class StarWarsService {
   constructor(private http :HttpClient) { }
 
   getAllCharacters() :Observable<Character[]>{
-    return this.http.get<Character[]>(this.baseUrl + '/api/Characters')
+    return this.http.get<Character[]>(this.baseUrl + '/api/Characters');
   }
+
+  getCharacterById(id : string) :Observable<Character>{
+    return this.http.get<Character>(this.baseUrl + '/api/Characters/' + id);
+  }
+
 
   getAllPlanets() :Observable<HomeWorld[]>{
-    return this.http.get<HomeWorld[]>(this.baseUrl + '/api/homeworlds')
+    return this.http.get<HomeWorld[]>(this.baseUrl + '/api/homeworlds');
   }
 
+  getPlanetById(id : string) :Observable<HomeWorld>{
+    return this.http.get<HomeWorld>(this.baseUrl + '/api/homeworlds/' + id);
+  }
+
+
   getAllStarShips() :Observable<StarShip[]>{
-    return this.http.get<StarShip[]>(this.baseUrl + '/api/starships')
+    return this.http.get<StarShip[]>(this.baseUrl + '/api/starships');
   }
 
   getAllFilms() :Observable<Film[]>{
-    return this.http.get<Film[]>(this.baseUrl + '/api/films')
+    return this.http.get<Film[]>(this.baseUrl + '/api/films');
   }
 
 
