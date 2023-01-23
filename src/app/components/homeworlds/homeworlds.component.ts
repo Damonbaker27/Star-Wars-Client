@@ -15,7 +15,6 @@ export class HomeworldsComponent implements OnInit {
 
   ngOnInit(): void {
       this.starWarsService.getAllPlanets().subscribe((response)=>{
-        console.log(response);
         this.homeWorlds = response;
       })
   }
