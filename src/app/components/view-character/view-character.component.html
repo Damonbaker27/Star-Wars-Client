@@ -1,16 +1,20 @@
 <div class="container">
   <div class ="box">
-    <div class="columns is-vcentered ">
+    <div class="columns ">
       <div class= "column is-one-third" ></div>
-          <img *ngIf="character" src="/assets/images/{{character.imagePath}}" height="500" width="300">
+        <img *ngIf="character" src="/assets/images/{{character.imagePath}}" height="500" width="300">
+      </div>
+    <div>
       <div class="column">
         <div class="content" *ngIf="character">
-          <h3>Character name: {{character.fullName}}</h3>
-          <h3 class = "title is-6">Mass: {{character.mass}} kg</h3>
-          <h3 class = "title is-6">Birth year: {{character.birthYear}} BBY</h3>
-          <h3 class = "title is-6">Hair Color: {{character.hairColor}}</h3>
-          <h3 *ngIf="homeWorld != null" class = "title is-6">Homeworld: {{homeWorld.name}}</h3>
+          <h3 *ngIf="character.fullName" class = "title is-2">{{character.fullName}} </h3>
+          <h3 *ngIf="character.mass" class = "title is-6">Mass: {{character.mass}} kg</h3>
+          <h3 *ngIf="character.birthYear" class = "title is-6">Birth year: {{character.birthYear}} BBY</h3>
+          <h3 *ngIf="character.hairColor" class = "title is-6">Hair Color: {{character.hairColor}}</h3>
+          <h3 *ngIf="character.skinColor" class = "title is-6">Skin Color: {{character.skinColor}}</h3>
+          <h3 *ngIf="character.eyeColor != null" class = "title is-6">Eye Color: {{character.eyeColor}}</h3>
+          <h3 *ngIf="homeWorld" class = "title is-6">Homeworld: {{homeWorld.name}}</h3>
         </div>
-    <div>
+      </div>
   </div>
 </div>

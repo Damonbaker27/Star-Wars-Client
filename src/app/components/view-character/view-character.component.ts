@@ -21,17 +21,15 @@ export class ViewCharacterComponent implements OnInit {
     this.route.paramMap.subscribe((params)=> {
       const id = params.get('id');
 
-      console.log(id);
-
       if(id != null){
         this.starWarsService.getCharacterById(id).subscribe((response)=>{
           this.character = response;
-        })
-      }
 
-      if(this.character != null){
-        this.starWarsService.getPlanetById(this.character.homeWorldId).subscribe((response)=>{
-          this.homeWorld = response;
+          if(this.character != null){
+            this.starWarsService.getPlanetById(this.character.homeWorldId).subscribe((response)=>{
+              this.homeWorld = response;
+            })
+          }
         })
       }
     })

@@ -23,7 +23,6 @@ export class StarWarsService {
     return this.http.get<Character>(this.baseUrl + '/api/Characters/' + id);
   }
 
-
   getAllPlanets() :Observable<HomeWorld[]>{
     return this.http.get<HomeWorld[]>(this.baseUrl + '/api/homeworlds');
   }
@@ -32,13 +31,19 @@ export class StarWarsService {
     return this.http.get<HomeWorld>(this.baseUrl + '/api/homeworlds/' + id);
   }
 
-
   getAllStarShips() :Observable<StarShip[]>{
     return this.http.get<StarShip[]>(this.baseUrl + '/api/starships');
+  }
+  getStarShipById(id : string) :Observable<StarShip>{
+    return this.http.get<StarShip>(this.baseUrl + '/api/StarShips/' + id);
   }
 
   getAllFilms() :Observable<Film[]>{
     return this.http.get<Film[]>(this.baseUrl + '/api/films');
+  }
+
+  getFilmById(id : string) :Observable<Film>{
+    return this.http.get<Film>(this.baseUrl + '/api/Films/' + id);
   }
 
 
