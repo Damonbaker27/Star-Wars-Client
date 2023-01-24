@@ -1,21 +1,23 @@
 <div class="container">
+  <br>
   <div class ="box">
-    <div class="columns ">
+    <div class="columns">
       <div class= "column is-one-third" ></div>
-        <img *ngIf="homeworld" src="/assets/images/{{homeworld.imagePath}}" height="500" width="300">
-      </div>
-    <div>
-      <div class="column">
-        <div class="content" *ngIf="homeworld">
-          <h3 *ngIf="homeworld.name" class = "title is-2">{{homeworld.name}} </h3>
-          <h3 *ngIf="homeworld.rotationPeriod" class = "title is-6">rotationPeriod: {{homeworld.rotationPeriod}} BBY</h3>
-          <h3 *ngIf="homeworld.orbitalPeriod" class = "title is-6">orbitalPeriod: {{homeworld.orbitalPeriod}}</h3>
-          <h3 *ngIf="homeworld.diameter" class = "title is-6">diameter: {{homeworld.diameter}}</h3>
-          <h3 *ngIf="homeworld.climate != null" class = "title is-6">climate: {{homeworld.climate}}</h3>
-          <h3 *ngIf="homeworld.population" class = "title is-6">population: {{homeworld.population}}</h3>
-          <h3 *ngIf="homeworld.surfaceWater != null" class = "title is-6">surfaceWater: {{homeworld.surfaceWater}}</h3>
-          <h3 *ngIf="homeworld.gravity != null" class = "title is-6">gravity: {{homeworld.gravity}}</h3>
+        <div class="image">
+          <img *ngIf="homeworld" src="/assets/images/{{homeworld.imagePath}}" height="500" width="300">
         </div>
       </div>
-  </div>
+      <div class="column is-two-thirds">
+        <div class="content" *ngIf="homeworld">
+          <h3 *ngIf="homeworld.name" class = "title is-2">{{homeworld.name}} </h3>
+          <h3 *ngIf="homeworld.rotationPeriod" class = "title is-6">Rotation Period: {{homeworld.rotationPeriod}} BBY</h3>
+          <h3 *ngIf="homeworld.orbitalPeriod" class = "title is-6">Orbital Period: {{homeworld.orbitalPeriod}} years</h3>
+          <h3 *ngIf="homeworld.diameter" class = "title is-6">Diameter: {{homeworld.diameter}} km</h3>
+          <h3 *ngIf="homeworld.climate != null" class = "title is-6">Climate: {{homeworld.climate}}</h3>
+          <h3 *ngIf="homeworld.population" class = "title is-6">Population: {{homeworld.population}}</h3>
+          <h3 *ngIf="homeworld.surfaceWater != null" class = "title is-6">Surface Water: {{homeworld.surfaceWater}}%</h3>
+          <h3 *ngIf="homeworld.gravity != null" class = "title is-6">Gravity: {{homeworld.gravity}}</h3>
+        </div>
+      </div>
+    </div>
 </div>

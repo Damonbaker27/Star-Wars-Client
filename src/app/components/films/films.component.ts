@@ -15,7 +15,6 @@ export class FilmsComponent implements OnInit {
 
   ngOnInit(): void {
       this.starWarsService.getAllFilms().subscribe((response)=>{
-        console.log(response);
         this.Films = response;
       })
   }

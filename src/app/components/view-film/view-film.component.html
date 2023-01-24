@@ -1,1 +1,16 @@
-<p>view-film works!</p>
+<div class="container">
+  <div class ="box">
+    <div class="columns">
+      <div class= "column is-one-third" ></div>
+        <img *ngIf="film" src="/assets/images/{{film.imagePath}}" height="500" width="300">
+      </div>
+      <div class="column is-two-thirds">
+        <div class="content" *ngIf="film">
+          <h3 *ngIf="film.title" class = "title is-2">{{film.title}} </h3>
+          <h3 *ngIf="film.director" class = "title is-6">Director: {{film.director}}</h3>
+          <h3 *ngIf="film.openingCrawl" class = "title is-6">Opening Crawl: {{film.openingCrawl}}</h3>
+          <h3 *ngIf="film.releaseDate" class = "title is-6">Release Date: {{film.releaseDate}}</h3>
+        </div>
+      </div>
+    </div>
+</div>

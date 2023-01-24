@@ -2,30 +2,26 @@
 <div class="container">
 <h1 class="title">Films</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>
-        Name
-      </th>
-      <th>
-        Image
-      </th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let film of Films">
-      <td>
-        {{film.title}}
-      </td>
-      <td><img alt="Film Image" src="assets/images/{{film.imagePath}}"></td>
-      <td>
-        <a>View</a>
-      </td>
+<br>
+<div class="container">
 
-    </tr>
-
-  </tbody>
-</table>
+<div class="columns is-flex-direction-row is-flex-wrap-wrap">
+  <div *ngFor="let film of Films" class="column is-one-quarter">
+    <div  class="card ">
+      <div class="card-image">
+        <figure class="image">
+          <a [routerLink]="['/films/', film.filmId]"><img alt="character" src="assets/images/{{film.imagePath}}" height="800" width="500"> </a>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+          </div>
+          <div class="media-content">
+            <h1 class="title is-3">{{film.title}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
