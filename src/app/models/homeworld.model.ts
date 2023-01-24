@@ -1,5 +1,5 @@
 export interface HomeWorld{
-  homeworldid: string;
+  homeWorldId: string;
   name: string;
   rotationPeriod: string;
   orbitalPeriod: string;

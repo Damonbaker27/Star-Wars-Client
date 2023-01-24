@@ -21,7 +21,7 @@ export class ViewHomeworldComponent implements OnInit {
     this.route.paramMap.subscribe((params)=> {
       const id = params.get('id');
 
-      console.log('the id is');
+      console.log('the id is ' + id);
 
 
       if(id != null){
