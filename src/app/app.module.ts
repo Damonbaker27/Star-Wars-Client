@@ -12,6 +12,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { ViewFilmComponent } from './components/view-film/view-film.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { ViewStarshipComponent } from './components/view-starship/view-starship.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ViewStarshipComponent } from './components/view-starship/view-starship.
     FilmsComponent,
     ViewFilmComponent,
     StarshipsComponent,
-    ViewStarshipComponent
+    ViewStarshipComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
