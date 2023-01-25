@@ -13,7 +13,7 @@
           <h3 *ngIf="character.hairColor" class = "title is-6">Hair Color: {{character.hairColor}}</h3>
           <h3 *ngIf="character.skinColor" class = "title is-6">Skin Color: {{character.skinColor}}</h3>
           <h3 *ngIf="character.eyeColor != null" class = "title is-6">Eye Color: {{character.eyeColor}}</h3>
-          <h3 *ngIf="homeWorld" class = "title is-6">Homeworld: {{homeWorld.name}}</h3>
+          <h3 *ngIf="homeWorld" class = "title is-6">Homeworld: <a [routerLink]="['/homeworlds/', homeWorld.homeWorldId]"> {{homeWorld.name}}</a></h3>
         </div>
       </div>
   </div>

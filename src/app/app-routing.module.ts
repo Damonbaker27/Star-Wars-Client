@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CharacterComponent } from './components/character/character.component';
 import { FilmsComponent } from './components/films/films.component';
+import { HomeComponent } from './components/home/home.component';
 import { HomeworldsComponent } from './components/homeworlds/homeworlds.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { ViewCharacterComponent } from './components/view-character/view-character.component';
@@ -42,8 +43,11 @@ const routes: Routes = [
 {
   path: 'starships/:id',
   component: ViewStarshipComponent
+},
+{
+  path: 'home',
+  component: HomeComponent
 }
-
 
 ];
 
